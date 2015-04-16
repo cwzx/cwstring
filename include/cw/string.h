@@ -1,6 +1,7 @@
 #ifndef INCLUDED_CW_STRING
 #define INCLUDED_CW_STRING
 #include <vector>
+#include <cstring>
 
 namespace cw {
 
@@ -18,7 +19,7 @@ namespace cw {
 		string() = default;
 
 		explicit string( const char* c ) {
-			auto bytes = strlen(c);
+			auto bytes = std::strlen(c);
 			units.resize( bytes );
 			std::copy( c, c + bytes, units.begin() );
 		}

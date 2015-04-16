@@ -1,6 +1,7 @@
 #ifndef INCLUDED_CW_UTF8
 #define INCLUDED_CW_UTF8
 #include <cstdint>
+#include <cstddef>
 #include <iterator>
 
 namespace cw {
@@ -12,7 +13,7 @@ namespace cw {
 		using unit_pointer      = const unit_type*;
 		using pointer           = unit_pointer;
 		using reference         = value_type;
-		using difference_type   = ptrdiff_t;
+		using difference_type   = std::ptrdiff_t;
 		using iterator_category = std::bidirectional_iterator_tag;
 
 		unit_pointer p;
@@ -109,9 +110,9 @@ namespace cw {
 	};
 
 	struct utf8 {
-		using unit_type = uint8_t;
-		using value_type = uint32_t;
-		using iterator = utf8_const_iterator;
+		using unit_type      = uint8_t;
+		using value_type     = uint32_t;
+		using iterator       = utf8_const_iterator;
 		using const_iterator = utf8_const_iterator;
 	};
 

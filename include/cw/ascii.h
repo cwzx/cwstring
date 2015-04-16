@@ -1,5 +1,6 @@
 #ifndef INCLUDED_CW_ASCII
 #define INCLUDED_CW_ASCII
+#include <cstddef>
 #include <iterator>
 
 namespace cw {
@@ -11,7 +12,7 @@ namespace cw {
 		using value_type        = unit_type;
 		using reference         = unit_type&;
 		using pointer           = unit_type*;
-		using difference_type   = ptrdiff_t;
+		using difference_type   = std::ptrdiff_t;
 		using iterator_category = std::bidirectional_iterator_tag;
 
 		pointer p;
@@ -60,9 +61,9 @@ namespace cw {
 
 	template<typename T>
 	struct simple_encoding {
-		using unit_type = T;
-		using value_type = unit_type;
-		using iterator = simple_iterator<unit_type>;
+		using unit_type      = T;
+		using value_type     = unit_type;
+		using iterator       = simple_iterator<unit_type>;
 		using const_iterator = simple_iterator<const unit_type>;
 	};
 
