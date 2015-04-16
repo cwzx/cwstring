@@ -33,7 +33,7 @@ namespace cw {
 				unit_type unit2 = *++q;
 
 				value_type full_code = ( ( unit1 & 0x1F ) << 6 )
-									 | ( unit2 & 0x3F );
+				                     | ( unit2 & 0x3F );
 				return full_code;
 			}
 
@@ -43,8 +43,8 @@ namespace cw {
 				unit_type unit3 = *++q;
 
 				value_type full_code = ( ( unit1 & 0x0F ) << 12 )
-									 | ( ( unit2 & 0x3F ) << 6 )
-									 | ( unit3 & 0x3F );
+				                     | ( ( unit2 & 0x3F ) << 6 )
+				                     | ( unit3 & 0x3F );
 				return full_code;
 			}
 
@@ -55,9 +55,9 @@ namespace cw {
 				unit_type unit4 = *++q;
 
 				value_type full_code = ( ( unit1 & 0x07 ) << 18 )
-									 | ( ( unit2 & 0x3F ) << 12 )
-									 | ( ( unit3 & 0x3F ) << 6 )
-									 | ( unit4 & 0x3F );
+				                     | ( ( unit2 & 0x3F ) << 12 )
+				                     | ( ( unit3 & 0x3F ) << 6 )
+				                     | ( unit4 & 0x3F );
 				return full_code;
 			}
 
